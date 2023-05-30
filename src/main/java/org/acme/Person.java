@@ -1,15 +1,17 @@
 package org.acme;
 
+
 public class Person {
+
 
     private int id;
     private String name;
     private int age;
-    private int telephoneNumber;
+    private String telephoneNumber;
 
     private String location;
 
-    public Person(int id, String name, int age, int telephoneNumber, String location) {
+    public Person(int id, String name, int age, String telephoneNumber, String location) {
         this.id = id;
         this.name = name;
         this.age = age;
@@ -41,11 +43,11 @@ public class Person {
         this.age = age;
     }
 
-    public int getTelephoneNumber() {
+    public String getTelephoneNumber() {
         return telephoneNumber;
     }
 
-    public void setTelephoneNumber(int telephoneNumber) {
+    public void setTelephoneNumber(String telephoneNumber) {
         this.telephoneNumber = telephoneNumber;
     }
 
@@ -56,4 +58,6 @@ public class Person {
     public void setLocation(String location) {
         this.location = location;
     }
+
+
 }

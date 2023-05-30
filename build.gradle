@@ -10,6 +10,8 @@ repositories {
 
 dependencies {
     implementation enforcedPlatform("${quarkusPlatformGroupId}:${quarkusPlatformArtifactId}:${quarkusPlatformVersion}")
+    implementation ('com.github.javafaker:javafaker:0.14') { exclude module: 'snakeyaml' }
+    implementation group: 'org.yaml', name: 'snakeyaml', version: '1.17'
     implementation 'io.quarkus:quarkus-resteasy-reactive-qute'
     implementation 'io.quarkus:quarkus-resteasy-reactive-jsonb'
     implementation 'io.quarkus:quarkus-resteasy-reactive-jackson'
@@ -23,6 +25,7 @@ dependencies {
     implementation 'io.quarkus:quarkus-rest-client-reactive-jsonb'
     implementation 'io.quarkus:quarkus-resteasy-reactive-kotlin-serialization'
     implementation 'io.quarkus:quarkus-arc'
+
     testImplementation 'io.quarkus:quarkus-junit5'
     testImplementation 'io.rest-assured:rest-assured'
 }
